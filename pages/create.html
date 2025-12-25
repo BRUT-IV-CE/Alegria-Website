@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer votre bijou - ALEGRIA Paris</title>
+    <meta name="description" content="Personnalisez votre bijou en diamant de synthèse avec ALEGRIA Paris. Choisissez la matière, la couleur, la taille et les détails de votre création unique.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="../index.html">
+                    <img src="../assets/images/LOGO/Logo blanc sur fond transparent.png" alt="ALEGRIA Paris" class="logo">
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar__menu">
+                <li><a href="../index.html#accueil">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#bijoux">Bijoux</a>
+                    <ul class="dropdown__menu">
+                        <li><a href="#collections">Collections ALEGRIA</a></li>
+                        <li><a href="create.html" class="active">Créé ton bijou</a></li>
+                        <li><a href="#inspirations">Vos créations</a></li>
+                        <li><a href="#offrir">Offrir</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#univers">L'univers ALEGRIA</a>
+                    <ul class="dropdown__menu">
+                        <li><a href="#histoire">Notre histoire</a></li>
+                        <li><a href="#diamant">Le diamant de synthèse</a></li>
+                        <li><a href="#engagements">Nos engagements</a></li>
+                        <li><a href="#presse">Presse</a></li>
+                    </ul>
+                </li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <a href="#" class="btn-icon" aria-label="Recherche">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero de la page Création -->
+    <section class="create-hero">
+        <div class="create-hero__stars"></div>
+        <div class="container">
+            <div class="create-hero__content">
+                <h1 class="create-hero__title">Créez votre bijou unique</h1>
+                <p class="create-hero__subtitle">Personnalisez chaque détail pour créer un bijou qui vous ressemble</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Carousel Section -->
+    <section class="jewelry-creator">
+        <div class="container">
+            <!-- Progress indicator -->
+            <div class="creator-progress">
+                <div class="creator-progress__bar">
+                    <div class="creator-progress__fill" id="progressBar"></div>
+                </div>
+                <div class="creator-progress__steps">
+                    <div class="creator-progress__step creator-progress__step--active" data-step="1">
+                        <span class="creator-progress__step-number">1</span>
+                        <span class="creator-progress__step-label">Matière</span>
+                    </div>
+                    <div class="creator-progress__step" data-step="2">
+                        <span class="creator-progress__step-number">2</span>
+                        <span class="creator-progress__step-label">Couleur</span>
+                    </div>
+                    <div class="creator-progress__step" data-step="3">
+                        <span class="creator-progress__step-number">3</span>
+                        <span class="creator-progress__step-label">Taille</span>
+                    </div>
+                    <div class="creator-progress__step" data-step="4">
+                        <span class="creator-progress__step-number">4</span>
+                        <span class="creator-progress__step-label">Serti</span>
+                    </div>
+                    <div class="creator-progress__step" data-step="5">
+                        <span class="creator-progress__step-number">5</span>
+                        <span class="creator-progress__step-label">Diamant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main carousel container -->
+            <div class="creator-carousel">
+                <!-- Navigation buttons for main carousel -->
+                <button class="creator-carousel__nav creator-carousel__nav--prev" id="mainPrevBtn" aria-label="Étape précédente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- Carousel track -->
+                <div class="creator-carousel__track" id="mainTrack">
+                    <!-- Slide 1: Matière -->
+                    <div class="creator-carousel__slide creator-carousel__slide--active" data-type="matiere">
+                        <div class="creator-slide">
+                            <h2 class="creator-slide__title">Choisissez la matière</h2>
+                            <p class="creator-slide__description">Sélectionnez la pureté de l'or pour votre bijou</p>
+                            
+                            <div class="options-carousel">
+                                <button class="options-carousel__nav options-carousel__nav--prev" data-carousel="matiere">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+
+                                <div class="options-carousel__track" data-carousel="matiere">
+                                    <div class="option-card" data-value="14-carats">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/matiere/14-carats.jpg" alt="Or 14 carats" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Or 14 carats</h3>
+                                            <p class="option-card__description">58,5% d'or pur - résistant et abordable</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="18-carats">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/matiere/18-carats.jpg" alt="Or 18 carats" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Or 18 carats</h3>
+                                            <p class="option-card__description">75% d'or pur - prestigieux et éclatant</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="options-carousel__nav options-carousel__nav--next" data-carousel="matiere">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Couleur -->
+                    <div class="creator-carousel__slide" data-type="couleur">
+                        <div class="creator-slide">
+                            <h2 class="creator-slide__title">Choisissez la couleur</h2>
+                            <p class="creator-slide__description">La teinte d'or qui sublimera votre bijou</p>
+                            
+                            <div class="options-carousel">
+                                <button class="options-carousel__nav options-carousel__nav--prev" data-carousel="couleur">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+
+                                <div class="options-carousel__track" data-carousel="couleur">
+                                    <div class="option-card" data-value="or-jaune">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/couleur/or-jaune.jpg" alt="Or Jaune" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Or Jaune</h3>
+                                            <p class="option-card__description">Classique et intemporel</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="or-blanc">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/couleur/or-blanc.jpg" alt="Or Blanc" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Or Blanc</h3>
+                                            <p class="option-card__description">Élégant et moderne</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="or-rose">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/couleur/or-rose.jpg" alt="Or Rose" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Or Rose</h3>
+                                            <p class="option-card__description">Romantique et chaleureux</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="options-carousel__nav options-carousel__nav--next" data-carousel="couleur">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Taille -->
+                    <div class="creator-carousel__slide" data-type="taille">
+                        <div class="creator-slide">
+                            <h2 class="creator-slide__title">Choisissez la taille</h2>
+                            <p class="creator-slide__description">La taille parfaite pour votre doigt</p>
+                            
+                            <div class="sizes-grid">
+                                <div class="sizes-grid__container">
+                                    <div class="option-card option-card--size" data-value="48">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">48</h3>
+                                            <p class="option-card__description">15.3mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="50">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">50</h3>
+                                            <p class="option-card__description">15.9mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="52">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">52</h3>
+                                            <p class="option-card__description">16.6mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="54">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">54</h3>
+                                            <p class="option-card__description">17.2mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="56">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">56</h3>
+                                            <p class="option-card__description">17.8mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="58">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">58</h3>
+                                            <p class="option-card__description">18.5mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="60">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">60</h3>
+                                            <p class="option-card__description">19.1mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="option-card option-card--size" data-value="62">
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">62</h3>
+                                            <p class="option-card__description">19.7mm</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="#guide-taille" class="sizes-grid__guide">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    Guide des tailles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Serti -->
+                    <div class="creator-carousel__slide" data-type="serti">
+                        <div class="creator-slide">
+                            <h2 class="creator-slide__title">Bague avec serti ?</h2>
+                            <p class="creator-slide__description">Ajoutez des pierres serties pour plus d'éclat</p>
+                            
+                            <div class="options-carousel">
+                                <button class="options-carousel__nav options-carousel__nav--prev" data-carousel="serti">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+
+                                <div class="options-carousel__track" data-carousel="serti">
+                                    <div class="option-card" data-value="oui">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/serti/avec-serti.jpg" alt="Avec Serti" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Avec Serti</h3>
+                                            <p class="option-card__description">Diamants sertis sur l'anneau</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="non">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/serti/sans-serti.jpg" alt="Sans Serti" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">Sans Serti</h3>
+                                            <p class="option-card__description">Anneau simple et épuré</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="options-carousel__nav options-carousel__nav--next" data-carousel="serti">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Diamant -->
+                    <div class="creator-carousel__slide" data-type="diamant">
+                        <div class="creator-slide">
+                            <h2 class="creator-slide__title">Choisissez votre diamant</h2>
+                            <p class="creator-slide__description">Nos diamants de synthèse, pureté exceptionnelle</p>
+                            
+                            <div class="options-carousel">
+                                <button class="options-carousel__nav options-carousel__nav--prev" data-carousel="diamant">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+
+                                <div class="options-carousel__track" data-carousel="diamant">
+                                    <div class="option-card" data-value="0.5-carat">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/diamant/0-5-carat.jpg" alt="0.5 Carat" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">0.5 Carat</h3>
+                                            <p class="option-card__description">Délicat et raffiné</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="1-carat">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/diamant/1-carat.jpg" alt="1 Carat" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">1 Carat</h3>
+                                            <p class="option-card__description">Élégant et prestigieux</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-card" data-value="1.5-carat">
+                                        <div class="option-card__image-wrapper">
+                                            <img src="../assets/images/create/diamant/1-5-carat.jpg" alt="1.5 Carat" class="option-card__image">
+                                        </div>
+                                        <div class="option-card__content">
+                                            <h3 class="option-card__title">1.5 Carat</h3>
+                                            <p class="option-card__description">Magnifique et éclatant</p>
+                                        </div>
+                                        <div class="option-card__check">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="options-carousel__nav options-carousel__nav--next" data-carousel="diamant">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="creator-carousel__nav creator-carousel__nav--next" id="mainNextBtn" aria-label="Étape suivante">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Summary & CTA -->
+            <div class="creator-summary">
+                <div class="creator-summary__content">
+                    <h3 class="creator-summary__title">Votre création</h3>
+                    <div class="creator-summary__selections" id="summaryList">
+                        <div class="creator-summary__item">
+                            <span class="creator-summary__label">Matière:</span>
+                            <span class="creator-summary__value" data-type="matiere">Non sélectionné</span>
+                        </div>
+                        <div class="creator-summary__item">
+                            <span class="creator-summary__label">Couleur:</span>
+                            <span class="creator-summary__value" data-type="couleur">Non sélectionné</span>
+                        </div>
+                        <div class="creator-summary__item">
+                            <span class="creator-summary__label">Taille:</span>
+                            <span class="creator-summary__value" data-type="taille">Non sélectionné</span>
+                        </div>
+                        <div class="creator-summary__item">
+                            <span class="creator-summary__label">Serti:</span>
+                            <span class="creator-summary__value" data-type="serti">Non sélectionné</span>
+                        </div>
+                        <div class="creator-summary__item">
+                            <span class="creator-summary__label">Diamant:</span>
+                            <span class="creator-summary__value" data-type="diamant">Non sélectionné</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--primary creator-summary__cta" id="submitCreation" disabled>
+                    Valider ma création
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <img src="../assets/images/LOGO/Logo blanc sur fond transparent.png" alt="ALEGRIA Paris" class="footer__logo">
+                    <p class="footer__tagline">Les étoiles à notre portée</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html#accueil">Accueil</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="create.html">Créer mon bijou</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__title">L'univers ALEGRIA</h4>
+                    <ul class="footer__links">
+                        <li><a href="#histoire">Notre histoire</a></li>
+                        <li><a href="#diamant">Le diamant de synthèse</a></li>
+                        <li><a href="#engagements">Nos engagements</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__title">Suivez-nous</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Instagram" class="footer__social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="footer__social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest" class="footer__social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 ALEGRIA Paris. Tous droits réservés.</p>
+                <div class="footer__legal">
+                    <a href="#mentions">Mentions légales</a>
+                    <a href="#confidentialite">Confidentialité</a>
+                    <a href="#cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../scripts/jewelry-creator.js"></script>
+</body>
+</html>

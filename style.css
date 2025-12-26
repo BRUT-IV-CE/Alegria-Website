@@ -131,8 +131,14 @@ ul, ol {
   padding-bottom: 1rem;
 }
 .navbar__logo .logo {
-  height: 40px;
+  height: 56px;
   width: auto;
+}
+
+@media (max-width: 480px) {
+  .navbar__logo .logo {
+    height: 44px;
+  }
 }
 .navbar__toggle {
   display: none;
@@ -407,6 +413,212 @@ ul, ol {
   color: #BDBDBD;
   margin-bottom: 4rem;
 }
+
+/* Collections page adjustments */
+.collections-listing {
+  padding: 4rem 0 6rem;
+}
+.collections-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.collections-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.collections-filters .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+}
+
+/* ensure outline/primary combo looks like homepage */
+.btn--outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid rgba(255,255,255,0.12);
+}
+.btn--outline:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+.btn--primary {
+  background-color: #FFFFFF;
+  color: #190042;
+}
+
+/* Dark banner for filters so white-outline buttons are visible */
+.collections-top {
+  width: 100%;
+  background: linear-gradient(135deg, #190042 0%, rgba(5,0,15,1) 100%);
+  padding: 1.25rem 1rem;
+  border-radius: 10px;
+}
+.collections-top .section-subtitle {
+  color: rgba(246, 221, 240, 0.95);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* place the grid on a white card to mimic e-commerce sites */
+.collections__grid {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: -2rem;
+  box-shadow: 0 10px 30px rgba(25,0,66,0.06);
+}
+
+/* product card styling closer to large retailers */
+.collection-card {
+  background: transparent;
+  border-radius: 6px;
+  overflow: visible;
+  box-shadow: none;
+}
+.collection-card__content {
+  padding: 1rem 0 0.5rem;
+}
+.collection-card__title {
+  font-size: 1rem;
+  color: #190042;
+}
+.collection-card__description {
+  color: #7a7a7a;
+  font-weight: 400;
+}
+.collection-card__image {
+  padding-top: 100%;
+  border-radius: 6px;
+  background: #fafafa;
+  overflow: hidden;
+}
+.collection-card__overlay {
+  background-color: rgba(25, 0, 66, 0.0);
+  opacity: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.75rem;
+}
+.collection-card__overlay .btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* grid layout similar to retailers */
+@media (min-width: 768px) {
+  .collections__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .collections__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Product detail page layout */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+@media (min-width: 992px) {
+  .product-detail {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.product-detail__media img {
+  width: 100%;
+  border-radius: 12px;
+  background: #fafafa;
+}
+.product-main-image {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.product-main-image img {
+  display: block;
+  width: 100%;
+  transition: transform 0.25s ease;
+}
+.product-main-image img:hover {
+  transform: scale(1.05);
+}
+.product-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.product-thumbs .thumb {
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product-thumbs .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.tabs-nav { display:flex; gap:0.5rem; margin-top:1.5rem; }
+.tab-btn { padding:0.5rem 1rem; border-radius:8px; border:1px solid rgba(25,0,66,0.08); background:#fff; cursor:pointer }
+.tab-btn.active { background:#190042; color:#fff; }
+.tab-panel { padding:1rem 0; }
+
+.recommendations { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
+.rec-card { width:120px; text-align:center; }
+.rec-card img { width:100%; border-radius:8px; display:block; }
+.rec-title { font-size:0.9rem; color:#190042; }
+.rec-price { font-weight:700; color:#190042; }
+
+.sort-select { padding:0.6rem 0.8rem; border-radius:8px; border:1px solid rgba(25,0,66,0.12); background:#fff }
+.collections-toolbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; width:100%; max-width:1320px; margin:0 auto; }
+.collections-controls { display:flex; gap:1rem; align-items:center; }
+
+.product-detail__info h1 {
+  font-size: 2rem;
+  color: #190042;
+  margin-bottom: 0.5rem;
+}
+.product-detail__info .muted {
+  color: #9e7fb3;
+  margin-bottom: 1rem;
+}
+.product-detail__info .price {
+  font-size: 1.5rem;
+  color: #190042;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Prevent fixed header from overlapping content on pages without full hero */
+main.product-page,
+main.page-collections {
+  padding-top: 80px; /* header height compensation */
+}
+
+/* Also ensure section titles respect header when navigating via anchors */
+.product-detail__info,
+.collections-listing {
+  scroll-margin-top: 80px;
+}
+
 
 .intro {
   padding: 6rem 0;

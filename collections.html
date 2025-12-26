@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Collections — ALEGRIA Paris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (copié depuis index) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="index.html"><img src="image/LOGO/Logo blanc sur fond transparent.png" alt="ALEGRIA Paris" class="logo"></a>
+            </div>
+            <button class="navbar__toggle" aria-label="Menu mobile"><span></span><span></span><span></span></button>
+            <ul class="navbar__menu">
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#collections">Bijoux</a></li>
+                <li><a href="index.html#univers">L'univers</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="navbar__actions"><a href="#" class="btn-icon" aria-label="Recherche"></a></div>
+        </nav>
+    </header>
+
+    <main class="page-collections">
+        <section class="container collections-listing">
+            <div class="collections-top">
+                <p class="section-subtitle">Découvrez nos créations — filtrez par collection</p>
+                <div class="collections-toolbar">
+                    <div class="collections-filters">
+                        <button data-filter="all" class="btn btn--outline">Toutes</button>
+                        <button data-filter="etoiles-eternelles" class="btn btn--outline">Étoiles Éternelles</button>
+                        <button data-filter="galaxie" class="btn btn--outline">Galaxie</button>
+                        <button data-filter="constellation" class="btn btn--outline">Constellation</button>
+                    </div>
+
+                    <div class="collections-controls">
+                        <label for="sortSelect" class="visually-hidden">Trier</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="default">Pertinence</option>
+                            <option value="price-asc">Prix croissant</option>
+                            <option value="price-desc">Prix décroissant</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="collectionsGrid" class="collections__grid"></div>
+
+            <div class="collections-loadmore" style="text-align:center;margin-top:1.5rem;">
+                <button id="loadMoreBtn" class="btn btn--primary">Charger plus</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (copied minimal) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2024 ALEGRIA Paris. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

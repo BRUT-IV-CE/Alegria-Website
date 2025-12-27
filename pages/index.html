@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALEGRIA Paris - Joaillerie de Luxe & Diamants de Synthèse</title>
     <meta name="description" content="Découvrez l'univers ALEGRIA Paris, créateur de bijoux en diamants de synthèse. Collections exclusives, créations sur-mesure et engagement éthique.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Header -->
+<!-- Navigation Header -->
     <header class="header">
         <nav class="navbar">
             <div class="navbar__logo">
-                <a href="index.html">
-                    <img src="assets/images/LOGO/Logo blanc sur fond transparent.png" alt="ALEGRIA Paris" class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/LOGO/Logo blanc sur fond transparent.png" alt="ALEGRIA Paris" class="logo">
                 </a>
             </div>
             
@@ -27,28 +27,27 @@
             </button>
 
             <ul class="navbar__menu">
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#accueil">Accueil</a></li>
                 <li class="dropdown">
-                    <a href="collections.html">Bijoux</a>
+                    <a href="#bijoux">Bijoux</a>
                     <ul class="dropdown__menu">
-                        <li><a href="collections.html">Collections ALEGRIA</a></li>
-                        <li><a href="pages/create.html">Créé ton bijou</a></li>
+                        <li><a href="index.html#collections">Collections ALEGRIA</a></li>
+                        <li><a href="create.html">Créé ton bijou</a></li>
                         <li><a href="#inspirations">Vos créations</a></li>
-                        <li><a href="#offrir">Offrir</a></li>
+                        <li><a href="index.html#offrir">Offrir</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages/univers.html">L'univers ALEGRIA</a>
+                    <a href="univers.html">L'univers ALEGRIA</a>
                     <ul class="dropdown__menu">
-                        <li><a href="#histoire">Notre histoire</a></li>
-                        <li><a href="#diamant">Le diamant de synthèse</a></li>
-                        <li><a href="#engagements">Nos engagements</a></li>
-                        <li><a href="#presse">Presse</a></li>
+                        <li><a href="univers.html#histoire">Notre histoire</a></li>
+                        <li><a href="univers.html#diamant">Le diamant de synthèse</a></li>
+                        <li><a href="univers.html#engagements">Nos engagements</a></li>
+                        <li><a href="univers.html#presse">Presse</a></li>
                     </ul>
                 </li>
-                <li><a href="#journal">Journal</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="on-discute.html" class="active">On discute</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
 
             <div class="navbar__actions">
@@ -60,6 +59,7 @@
             </div>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero" id="accueil">
@@ -247,7 +247,6 @@
         <button class="gifting__dot" data-slide="2" aria-label="Aller à la slide 3"></button>
     </div>
 </section>
-
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -255,64 +254,126 @@
             <div class="contact__wrapper">
                 <div class="contact__info">
                     <h3>ALEGRIA Paris</h3>
+                    
                     <div class="contact__details">
-                        <p>
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                            Paris, France
-                        </p>
-                        <p>
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M3 7l7 5 7-5" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                            contact@alegria-paris.com
-                        </p>
-                        <p>
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V17a2 2 0 01-2 2h-1C7.716 19 1 12.284 1 4V3z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                            <a href="tel:+33642528536">06 42 52 85 36</a>
-                        </p>
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2a8 8 0 018 8c0 5.333-8 12-8 12S4 15.333 4 10a8 8 0 018-8z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="contact-detail__content">
+                                <h4>Adresse</h4>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-detail__content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@alegria-paris.com">contact@alegria-paris.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C7.716 21 3 16.284 3 7V5z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-detail__content">
+                                <h4>Téléphone</h4>
+                                <p><a href="tel:+33642528536">06 42 52 85 36</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-detail__content">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/33642528536" target="_blank" class="whatsapp-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                    Discuter sur WhatsApp
+                                </a></p>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="contact__social">
-                        <a href="#" aria-label="Instagram"><svg width="24" height="24"><use href="#icon-instagram"/></svg></a>
-                        <a href="#" aria-label="Facebook"><svg width="24" height="24"><use href="#icon-facebook"/></svg></a>
-                        <a href="#" aria-label="Pinterest"><svg width="24" height="24"><use href="#icon-pinterest"/></svg></a>
+                        <h4>Suivez-nous</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram">
+                                <svg width="24" height="24"><use href="#icon-instagram"/></svg>
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <svg width="24" height="24"><use href="#icon-facebook"/></svg>
+                            </a>
+                            <a href="#" aria-label="Pinterest">
+                                <svg width="24" height="24"><use href="#icon-pinterest"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <form class="contact__form">
-                    <div class="form-group">
-                        <label class="form-label">Nom complet *</label>
-                        <input type="text" class="form-input" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Prénom *</label>
+                            <input type="text" name="prenom" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nom *</label>
+                            <input type="text" name="nom" class="form-input" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Email *</label>
-                        <input type="email" class="form-input" required>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Téléphone</label>
+                            <input type="tel" name="telephone" class="form-input">
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="form-label">Sujet</label>
-                        <select class="form-select">
-                            <option>Demande d'information</option>
-                            <option>Devis personnalisé</option>
-                            <option>Service client</option>
-                            <option>Partenariat</option>
-                            <option>Presse</option>
+                        <label class="form-label">Sujet *</label>
+                        <select name="sujet" class="form-select" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="devis">Devis personnalisé</option>
+                            <option value="commande">Suivi de commande</option>
+                            <option value="sav">Service après-vente</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="presse">Presse</option>
+                            <option value="autre">Autre</option>
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label class="form-label">Message *</label>
-                        <textarea class="form-textarea" rows="6" required></textarea>
+                        <textarea name="message" class="form-textarea" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary">Envoyer le message</button>
+
+                    <button type="submit" class="btn btn--primary btn--large">Envoyer le message</button>
                 </form>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
